@@ -1,0 +1,6 @@
+health = '''Checa estado da aplicação'''
+health_success = '''A aplicação está em execução'''
+server_transmission = '''Este endpoint permite realizar a transmissão de servidor.'''
+server_transmission_success = '''Servidor transmitido com sucesso'''
+error_400 = '''Verify the payload, possible request errors'''
+error_500 = '''Our bad :('''
