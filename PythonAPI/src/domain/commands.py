@@ -9,6 +9,9 @@ class Command:
 class Server(Command):
     id: int
     nome: str
+    url: str
+    ip: str
+    status: str
     login: str
     senha: str
   
