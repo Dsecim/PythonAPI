@@ -4,27 +4,25 @@ from pydantic import (BaseModel, Field, constr, conint)
 
 
 class ServerDTO(BaseModel):
-    id: Optional[conint(gt=0,le=9999)] = Field(None,
+    id: Optional[constr(min_length=1)] = Field(None,
                                                title='Codigo',
                                                description='Código identificador do servidor')
-    nome: constr(min_length=10) = Field(None,
+    nome: constr(min_length=5) = Field(None,
                                        title='Nome',
-                                       description='Nome completo do usuario. Ex:Daniela Secim Netto dos Reys')
+                                       description='Nome do servidor. Ex: SSA - Caminho de Areia')
     url: Optional[str] = Field(None,
-                                    title='url do servidor',
-                                    description='url do servidor')
+                                                 title='url do servidor',
+                                                 description='url do servidor')
     ip: str = Field(...,
-                        title='IP do servidor',
-                        description='IP Público do servidor')
-    
+                                     title='IP do servidor',
+                                     description='IP Público do servidor')
     status: constr(min_length=2) = Field(...,
                                          title='IP do servidor',
-                                         description='IP Público do servidor')    
-    
-    login: constr(min_length=6) = Field(None,
+                                         description='IP Público do servidor')
+    login: constr(min_length=3) = Field(None,
                                         title='login',
                                         description='login')
-    senha: constr(min_length=7) = Field(None,
+    senha: constr(min_length=3) = Field(...,
                                         title='Número do telefone',
                                         description='Número do telefone')
 
