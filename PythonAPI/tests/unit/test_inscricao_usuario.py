@@ -1,5 +1,5 @@
 import  pytest 
-
+from src.domain.dto.server import ServerDTO
 from pydantic.error_wrappers import ValidationError
 
 
